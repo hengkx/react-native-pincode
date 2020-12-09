@@ -124,6 +124,7 @@ export type IProps = {
   passcodeFallback?: boolean;
   vibrationEnabled?: boolean;
   delayBetweenAttempts?: number;
+  styleCirclePassword?: StyleProp<ViewStyle>;
 };
 
 export type IState = {
@@ -296,6 +297,7 @@ class PINCode extends React.PureComponent<IProps, IState> {
             validationRegex={this.props.validationRegex}
             vibrationEnabled={this.props.vibrationEnabled}
             delayBetweenAttempts={this.props.delayBetweenAttempts}
+            styleCirclePassword={this.props.styleCirclePassword}
           />
         )}
         {status === PinStatus.enter && (
@@ -395,6 +397,7 @@ class PINCode extends React.PureComponent<IProps, IState> {
             touchIDTitle={this.props.touchIDTitle || touchIDTitleDefault}
             vibrationEnabled={this.props.vibrationEnabled}
             delayBetweenAttempts={this.props.delayBetweenAttempts}
+            styleCirclePassword={this.props.styleCirclePassword}
           />
         )}
         {(pinStatus === PinResultStatus.locked ||

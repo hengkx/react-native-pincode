@@ -90,6 +90,7 @@ export interface IProps {
   passcodeFallback?: boolean;
   vibrationEnabled?: boolean;
   delayBetweenAttempts?: number;
+  styleCirclePassword?: StyleProp<ViewStyle>;
 }
 
 export interface IState {
@@ -310,6 +311,7 @@ class PinCodeEnter extends React.PureComponent<IProps, IState> {
           }
           vibrationEnabled={this.props.vibrationEnabled}
           delayBetweenAttempts={this.props.delayBetweenAttempts}
+          styleCirclePassword={this.props.styleCirclePassword}
         />
       </View>
     );
