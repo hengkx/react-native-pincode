@@ -1,6 +1,6 @@
 {
-  "name": "react-native-pincode",
-  "version": "0.1.0",
+  "name": "@hengkx/react-native-pincode",
+  "version": "0.1.1",
   "description": "React native PIN code component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -27,6 +27,7 @@
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.13.2",
     "d3-ease": "^2.0.0",
+    "d3-interpolate": "^2.0.1",
     "lodash": "^4.17.20",
     "react-move": "^6.4.0",
     "react-native-easy-grid": "^0.2.2",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@types/d3-ease": "^2.0.0",
+    "@types/d3-interpolate": "^2.0.0",
     "@types/lodash": "^4.14.165",
     "@types/react": "^16.0.40",
     "@types/react-native": "^0.63.37",

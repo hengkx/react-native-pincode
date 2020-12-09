@@ -19,6 +19,7 @@ import {
 } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { interpolate, interpolateTransformSvg } from 'd3-interpolate';
 
 /**
  * Pin Code Component
@@ -399,6 +400,13 @@ class PinCode extends React.PureComponent<IProps, IState> {
                 ],
                 y: [moveData.y],
                 timing: { duration: 200, ease: easeLinear },
+              }}
+              interpolation={(begValue, endValue, attr) => {
+                if (attr === 'transform') {
+                  return interpolateTransformSvg(begValue, endValue);
+                }
+
+                return interpolate(begValue, endValue);
               }}>
               {({
                 opacity,
@@ -586,6 +594,13 @@ class PinCode extends React.PureComponent<IProps, IState> {
             ],
             opacityTitle: [showError || attemptFailed ? grid.highOpacity : 1],
             timing: { duration: 200, ease: easeLinear },
+          }}
+          interpolation={(begValue, endValue, attr) => {
+            if (attr === 'transform') {
+              return interpolateTransformSvg(begValue, endValue);
+            }
+
+            return interpolate(begValue, endValue);
           }}>
           {({ opacity, colorTitle, colorSubtitle, opacityTitle }: any) => (
             <View
