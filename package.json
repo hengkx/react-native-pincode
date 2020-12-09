@@ -1,6 +1,6 @@
 {
-  "name": "@haskkor/react-native-pincode",
-  "version": "1.22.5",
+  "name": "react-native-pincode",
+  "version": "0.1.0",
   "description": "React native PIN code component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,6 @@
     "dev": "yarn build -watch",
     "build": "tsc",
     "compile": "npm run build",
-    "addlocal": "yarn add file:./local_modules/react-native-pincode",
     "test": "jest",
     "pretty": "prettier --single-quote --no-semi --jsx-bracket-same-line --write \"src/**/*.{ts, tsx}\""
   },
@@ -17,14 +16,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Haskkor/react-native-pincode.git"
+    "url": "git+https://github.com/hengkx/react-native-pincode.git"
   },
   "author": "Jeremy Farnault",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Haskkor/react-native-pincode/issues"
+    "url": "https://github.com/hengkx/react-native-pincode/issues"
   },
-  "homepage": "https://github.com/Haskkor/react-native-pincode#readme",
+  "homepage": "https://github.com/hengkx/react-native-pincode#readme",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
+    "d3-ease": "^2.0.0",
+    "lodash": "^4.17.20",
+    "react-move": "^6.4.0",
+    "react-native-easy-grid": "^0.2.2",
+    "react-native-keychain": "^6.2.0",
+    "react-native-touch-id": "^4.4.1",
+    "react-native-vector-icons": "^7.1.0"
+  },
   "devDependencies": {
     "@types/d3-ease": "^1.0.7",
     "@types/lodash": "^4.14.104",
@@ -44,18 +53,11 @@
     "react-test-renderer": "^16.4.1",
     "typescript": "^2.7.2"
   },
-  "dependencies": {
-    "@react-native-community/async-storage": "^1.7.1",
-    "d3-ease": "^1.0.3",
-    "lodash": "^4.17.5",
-    "react-move": "^2.7.0",
-    "react-native-easy-grid": "^0.2.2",
-    "react-native-keychain": "^6.1.1",
-    "react-native-touch-id": "^4.4.1",
-    "react-native-vector-icons": "^7.0.0"
-  },
   "peerDependencies": {
     "react": "*",
     "react-native": "*"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
